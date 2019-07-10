@@ -1,0 +1,18 @@
+<html>
+<body>
+	<p id="random_values"></p>
+	<script>
+function generateRandomValues() {
+var random_values = [];
+var str = ""; 
+for(let i=1; i<=100; i++) {
+var randomValueBetween0and99 = Math.floor(Math.random() * 100);
+random_values.push(randomValueBetween0and99);
+str += randomValueBetween0and99 + " ";
+}
+document.getElementById("random_values").innerHTML = str;
+}
+generateRandomValues();
+	</script>
+</body>
+</html>

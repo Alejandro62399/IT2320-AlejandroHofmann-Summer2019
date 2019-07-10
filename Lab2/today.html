@@ -1,0 +1,33 @@
+<html>
+<body>
+	<p>
+		Date Format 1:
+		<span id="date1"></span>
+	</p>
+	<p>
+		Date Format 2:
+		<span id="date2"></span>
+	</p>
+	<p>
+		Date Format 3:
+		<span id="date3"></span>
+	</p>
+	<script>
+		function DisplayDate() {
+			var date = new Date(Date.UTC(2019, 7, 16));
+
+			var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+			var date1 = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
+			var date2 = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear();
+			var date3 = months[date.getMonth() - 1] + " " + date.getDate() + ", " + date.getFullYear();
+
+
+			document.getElementById("date1").innerHTML = date1;
+			document.getElementById("date2").innerHTML = date2;
+			document.getElementById("date3").innerHTML = date3;
+		}
+	</script>
+	<button onclick="DisplayDate()">Display Date</button>
+</body>
+</html>
