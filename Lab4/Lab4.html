@@ -6,66 +6,66 @@
 
 		<script>
 
-			var items = [];
+		var items = [];
 
-			var costs = [];
+		var costs = [];
 
 	// 2. Change all calls to document.getElementById to the jQuery $ method
     // 3. Replace the window.onload event with jQuery document(ready)
     //    https://www.w3schools.com/jquery/jquery_syntax.asp
 
-			$(document).ready(function () {
-				$('#newItem').focus();
+		$(document).ready(function () {
+		$('#newItem').focus();
 
-			});
+		});
 
-			function openTab(tabName) {
-				var i;
+		function openTab(tabName) {
+		var i;
 	// 4. Change getElementsByClassName to the jQuery $ method
-			var x = $(".tab");
-				for (i = 0; i < x.length; i++) {
+		var x = $(".tab");
+		for (i = 0; i < x.length; i++) {
 	 // 5. Change the following line style.display = "none" to hide()
      //    https://www.w3schools.com/jquery/jquery_hide_show.asp
-				x[i].hide();
-				}
+		x[i].hide();
+		}
 	// 6. Change the following line style.display = "block" to show()
 				https://www.w3schools.com/jquery/jquery_hide_show.asp
-			$('#tabName').show();
-			}
+		$('#tabName').show();
+		}
 
-			function addItem() {
+		function addItem() {
 
-				var newItem = $('#newItem').val();
+		var newItem = $('#newItem').val();
 
-			var newAmount = parseFloat($('#newAmount').val());
+		var newAmount = parseFloat($('#newAmount').val());
 
-			costs.push(newAmount);
+		costs.push(newAmount);
 
-			items.push(newItem);
+		items.push(newItem);
 
-				var itemsDisplay = "<table border='1' cellspacing='0' cellpadding='3'><tr><td>Item</td><td>Amount</td></tr>";
+		var itemsDisplay = "<table border='1' cellspacing='0' cellpadding='3'><tr><td>Item</td><td>Amount</td></tr>";
 
-			var totalAmount = 0.00;
+		var totalAmount = 0.00;
 
-				for (var i in items) {
+		for (var i in items) {
 
-					alert('looping through items');
+		alert('looping through items');
 
-				itemsDisplay += "<tr><td>" + items[i] + "</td><td>$" + costs[i].toFixed(2) + "</td></tr>";
+		itemsDisplay += "<tr><td>" + items[i] + "</td><td>$" + costs[i].toFixed(2) + "</td></tr>";
 
-				totalAmount += parseFloat(costs[i]);
+		totalAmount += parseFloat(costs[i]);
 
-			}
+		}
 
-			var itemsSummary = itemsDisplay;
+		var itemsSummary = itemsDisplay;
 
-				itemsDisplay += "</table>";
+		itemsDisplay += "</table>";
 
-				itemsSummary += "<tr><td>Total before tax</td><td>$" + totalAmount.toFixed(2) + "</td></tr>";
+		itemsSummary += "<tr><td>Total before tax</td><td>$" + totalAmount.toFixed(2) + "</td></tr>";
 
-				itemsSummary += "<tr><td>Tax amount</td><td>$" + (totalAmount * .07).toFixed(2) + "</td></tr>";
+		itemsSummary += "<tr><td>Tax amount</td><td>$" + (totalAmount * .07).toFixed(2) + "</td></tr>";
 
-				itemsSummary += "<tr><td>Total with tax</td><td>$" + ((totalAmount * .07) + totalAmount).toFixed(2) + "</td></tr></table>";
+		itemsSummary += "<tr><td>Total with tax</td><td>$" + ((totalAmount * .07) + totalAmount).toFixed(2) + "</td></tr></table>";
 
 		 // 7. Change all .innerHTML properties to jQuery .html() get and set
         //    https://www.w3schools.com/jquery/jquery_dom_get.asp
@@ -84,7 +84,7 @@
 
 		$('#newItem').focus();
 
-			}
+		}
 
 	</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
