@@ -2,7 +2,6 @@
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
-		$(document).ready(function () {
 			 // 1. use eq to retrieve the paragraph with index 1. 
 	    //    Highlight it by setting the CSS background-color to yellow.
       // 2. if the user clicks the submit button and the value of favoriteFood is empty, 
@@ -11,20 +10,20 @@
       // 3. retrieve the first paragraph element and use the parent() method to modify 
 	    //    the appearance of the h1 element.
 
+			$(document).ready(function () {
+
 			$("p").eq(1).css("background-color", "yellow");
 
 			$("p").eq(1).parent().children("h1").css("color", "orange");
 
 			$("#favoriteForm").submit(function () {
-
 				if (!$("#favoriteFood").val()) {
-
 					$("#favoriteFood").next().text("You must enter a favorite food");
-
 					return false;
 				}
 			});
 		});
+
 	</script>
 </head>
 <body>
