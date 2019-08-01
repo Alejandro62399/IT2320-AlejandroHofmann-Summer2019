@@ -1,0 +1,68 @@
+
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+
+
+	<title>IT2320 - Lab 9</title>
+
+	<script>
+		$(document).ready(function () {
+			$('#firstName').focus();
+			// Datepicker Popup Calender to Choose Date.
+			$(function () {
+				$("#datepicker").datepicker();
+			});
+
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+	<form action="">
+
+		First Name:
+		<br>
+		<input type="text" name="FirstName" required>
+		<br>
+
+		Last Name:
+		<br>
+		<input type="text" name="LastName" required>
+		<br>
+
+		Address:<br>
+		<input type="text" name="address" required>
+		<br>
+
+		City:
+		<br>
+		<input type="text" name="city" required>
+		<br>
+
+		State:
+		<br>
+		<input type="text" name="state" required>
+		<br>
+
+		Zip:<br>
+		<input type="text" name="zip" required>
+		<br>
+
+		Age:<br>
+		<input type="text" name="age" required pattern="[0-100]">
+		<br>
+
+		Start Date:<br>
+		<input type="text" id="datepicker" required>
+		<br>
+
+		<input type="submit">
+
+	</form>
+
+</body>
+</html>
